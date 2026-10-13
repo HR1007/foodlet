@@ -78,8 +78,9 @@ export const STATS = {
 export const PARTNERS = {
   title: '合作夥伴',
   sub: '已有多家餐飲品牌、會員平台與創新商家選擇與 Foodlet 合作打造區塊鏈消費新體驗',
-  // fictional brands — the Figma file used real-looking marks, replaced to avoid trademark issues
-  names: ['麵包坊 Crumb', 'Sushi Ring', 'Taco Lab', 'Bowl & Co.', 'Matcha Hour', 'Grill 22', 'Pasta Note'],
+  // invented names only — no real brands (the Figma file used real-looking marks)
+  names: ['呼嚕嚕早午餐', '噗噗丼研究室', '啵啵茶實驗所', '嘟嘟麵工坊', '咻咻甜點站', '嗶嗶燒肉堂', '唧唧咖啡社'],
+  note: '以上皆為 Demo 虛構品牌',
 }
 
 export const TEAM_NOTE = {

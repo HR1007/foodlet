@@ -178,6 +178,7 @@ export function Partners() {
             <li key={n}>{n}</li>
           ))}
         </ul>
+        <p className="partners__note">{PARTNERS.note}</p>
       </Reveal>
     </Section>
   )

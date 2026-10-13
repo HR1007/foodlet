@@ -387,6 +387,13 @@
 .cta__inner {
   display: flex;
   flex-direction: column;
+.partners__note {
+  margin-top: var(--space-5);
+  font-size: var(--body-4);
+  text-align: center;
+  color: var(--l-grey);
+}
+
   align-items: center;
   gap: var(--space-5);
   text-align: center;
