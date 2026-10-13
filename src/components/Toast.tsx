@@ -24,9 +24,9 @@ export function ToastProvider({ children }: { children: ReactNode }) {
             <motion.div
               key={message}
               className="toast"
-              initial={{ opacity: 0, transform: 'translateY(100%)' }}
+              initial={{ opacity: 0, transform: 'translateY(-100%)' }}
               animate={{ opacity: 1, transform: 'translateY(0%)' }}
-              exit={{ opacity: 0, transform: 'translateY(100%)' }}
+              exit={{ opacity: 0, transform: 'translateY(-100%)' }}
               transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
             >
               {message}

@@ -1,7 +1,7 @@
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { MotionConfig } from 'motion/react'
 import Layout from './layout/Layout'
-import Placeholder from './pages/Placeholder'
+import JoinPage from './pages/JoinPage'
 import HomePage from './pages/HomePage'
 import { BusinessPage, FeaturesPage, InnovationPage } from './pages/ContentPages'
 import { ToastProvider } from './components/Toast'
@@ -18,7 +18,7 @@ export default function App() {
               <Route path="/features" element={<FeaturesPage />} />
               <Route path="/innovation" element={<InnovationPage />} />
               <Route path="/business" element={<BusinessPage />} />
-              <Route path="/join" element={<Placeholder title="註冊帳號" />} />
+              <Route path="/join" element={<JoinPage />} />
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

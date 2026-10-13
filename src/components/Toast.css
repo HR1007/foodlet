@@ -1,7 +1,7 @@
 .toast-region {
   position: fixed;
   left: 50%;
-  bottom: var(--space-5);
+  top: calc(var(--header-h) + var(--space-4));
   z-index: 60;
   translate: -50% 0;
   pointer-events: none;
