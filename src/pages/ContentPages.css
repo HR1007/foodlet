@@ -12,7 +12,7 @@
 
 .page-hero__art {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .page-hero__accent {
@@ -107,6 +107,10 @@
   .page-hero__inner {
     grid-template-columns: 1fr;
     gap: var(--space-6);
+  }
+
+  .page-hero__art {
+    justify-content: center;
   }
 
   .biz-cards {

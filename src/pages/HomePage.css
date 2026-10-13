@@ -47,7 +47,7 @@
 
 .hero__art {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .hero__art .illus {
@@ -112,6 +112,10 @@
 
   .hero__copy p {
     margin-inline: auto;
+  }
+
+  .hero__art {
+    justify-content: center;
   }
 
   .hero__art .illus {
