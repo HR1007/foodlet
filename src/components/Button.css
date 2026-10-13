@@ -1,0 +1,129 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-btn);
+  font-weight: 500;
+  white-space: nowrap;
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.12s var(--ease-out);
+}
+
+.btn--normal {
+  height: 56px;
+  padding: 0 var(--space-6);
+  font-size: var(--body-1);
+  font-weight: 400;
+}
+
+.btn--medium {
+  height: 44px;
+  padding: 0 var(--space-5);
+  font-size: var(--body-2);
+}
+
+.btn--small {
+  height: 32px;
+  padding: 0 var(--space-4);
+  font-size: var(--body-3);
+}
+
+/* Primary */
+.btn--primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn--primary:active:not(:disabled),
+.btn--primary.is-loading {
+  background: var(--primary-press);
+}
+
+/* Secondary */
+.btn--secondary {
+  border-color: var(--primary);
+  background: var(--white);
+  color: var(--primary);
+}
+
+.btn--secondary:active:not(:disabled),
+.btn--secondary.is-loading {
+  border-color: transparent;
+  background: var(--silver);
+}
+
+/* Tertiary */
+.btn--tertiary {
+  background: transparent;
+  color: var(--primary);
+}
+
+.btn:focus-visible {
+  outline: none;
+  border-color: var(--d-grey);
+}
+
+.btn--secondary:focus-visible {
+  border-color: var(--l-grey);
+  background: var(--silver);
+}
+
+.btn:disabled:not(.is-loading) {
+  border-color: transparent;
+  background: var(--silver);
+  color: var(--grey-blue);
+  cursor: not-allowed;
+}
+
+.btn.is-loading {
+  cursor: progress;
+}
+
+/* press feedback: subtle, fast — fires many times */
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn__arrow {
+  transition: transform 0.2s var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn--primary:hover:not(:disabled) {
+    background: var(--primary-hover);
+  }
+
+  .btn--secondary:hover:not(:disabled),
+  .btn--tertiary:hover:not(:disabled) {
+    background: var(--silver);
+  }
+
+  .btn:hover .btn__arrow {
+    transform: translateX(3px);
+  }
+}
+
+.btn__spin {
+  animation: btn-spin 0.9s linear infinite;
+}
+
+@keyframes btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn:active:not(:disabled) {
+    transform: none;
+  }
+
+  .btn__spin {
+    animation-duration: 2.4s;
+  }
+}

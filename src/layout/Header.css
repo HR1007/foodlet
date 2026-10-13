@@ -1,0 +1,129 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--white);
+  box-shadow: var(--shadow-header);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  height: var(--header-h);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.logo__word {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.logo--dark .logo__word {
+  color: var(--black);
+}
+
+.logo--orange .logo__word {
+  color: var(--brand-orange);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.header__link {
+  position: relative;
+  padding: var(--space-2) 0;
+  font-size: var(--body-3);
+  font-weight: 500;
+  color: var(--d-grey);
+  transition: color 0.18s ease;
+}
+
+.header__link.active {
+  color: var(--black);
+}
+
+.header__underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header__link:hover {
+    color: var(--black);
+  }
+}
+
+.header__cta {
+  margin-left: var(--space-2);
+}
+
+.header__toggle {
+  display: none;
+  padding: var(--space-2);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--black);
+}
+
+.header__sheet {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .logo__word {
+    font-size: 20px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__toggle {
+    display: grid;
+  }
+
+  .header__sheet {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-3) var(--space-5) var(--space-5);
+    background: var(--white);
+    box-shadow: 0 12px 24px rgb(38 50 56 / 0.12);
+  }
+
+  .header__sheet-link {
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--silver);
+    font-weight: 500;
+  }
+
+  .header__sheet-link.active {
+    color: var(--primary);
+  }
+
+  .header__sheet .btn {
+    margin-top: var(--space-3);
+  }
+}

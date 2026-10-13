@@ -1,0 +1,92 @@
+/*
+ * Foodlet design tokens — from the Figma Colors / Typography / Buttons frames
+ * on the 「餐飲 x 數位錢包支付體驗設計：食錢包Foodlet」 page.
+ */
+:root {
+  /* brand */
+  --primary: #fbbc5d;          /* button / accent yellow */
+  --primary-soft: #ffd89d;     /* Primary swatch */
+  --primary-press: #ccae72;    /* Button State=Click / Loading */
+  --primary-hover: #f4b04a;    /* not in Figma (Hover = Default there); slight darken so hover reads */
+  --brand-orange: #fe7551;     /* logo wordmark */
+  --info: #2194f3;
+
+  /* tints (section backgrounds) */
+  --tint-1: #fde3b6;
+  --tint-2: #fdeccd;
+  --tint-3: #fef3e0;
+  --tint-4: #fef9ef;
+  --cream: #faf3e0;
+
+  /* neutrals */
+  --black: #263238;            /* Secondary */
+  --d-grey: #4d4d4d;
+  --grey: #717171;
+  --l-grey: #89939e;
+  --grey-blue: #abbed1;
+  --silver: #f5f7fa;
+  --white: #ffffff;
+  --navy: #142134;             /* NFT card */
+  --ink-900: #18191f;
+
+  /* action */
+  --warning: #fbc02d;
+  --error: #e53835;
+  --success: #2e7d31;
+
+  /* type — Typography frame */
+  --font-sans: 'Inter', 'Noto Sans TC', 'PingFang TC', system-ui, sans-serif;
+  --h1: 64px;
+  --h1-lh: 76px;
+  --h2: 36px;
+  --h2-lh: 44px;
+  --h3: 28px;
+  --h3-lh: 36px;
+  --h4: 20px;
+  --h4-lh: 28px;
+  --body-1: 18px;
+  --body-1-lh: 28px;
+  --body-2: 16px;
+  --body-2-lh: 24px;
+  --body-3: 14px;
+  --body-3-lh: 20px;
+  --body-4: 12px;
+  --body-4-lh: 16px;
+
+  /* space / radius / layout */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --radius-btn: 4px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --radius-pill: 9999px;
+  --container: 1200px;
+  --header-h: 80px;
+  --shadow-card: 0 2px 4px rgb(171 190 209 / 0.25), 0 8px 24px rgb(171 190 209 / 0.18);
+  --shadow-header: 0 2px 8px rgb(38 50 56 / 0.08);
+
+  /* motion — strong curves from the animate skill */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --h1: 36px;
+    --h1-lh: 44px;
+    --h2: 26px;
+    --h2-lh: 34px;
+    --h3: 22px;
+    --h3-lh: 30px;
+    --header-h: 64px;
+  }
+}

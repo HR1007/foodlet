@@ -1,0 +1,18 @@
+.toast-region {
+  position: fixed;
+  left: 50%;
+  bottom: var(--space-5);
+  z-index: 60;
+  translate: -50% 0;
+  pointer-events: none;
+}
+
+.toast {
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-pill);
+  background: var(--black);
+  color: var(--white);
+  font-size: var(--body-3);
+  box-shadow: 0 8px 24px rgb(38 50 56 / 0.25);
+  white-space: nowrap;
+}
