@@ -18,7 +18,7 @@ export default function Footer() {
 
   const subscribe = (e: FormEvent) => {
     e.preventDefault()
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return toast('請輸入有效的 Email')
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return toast(FOOTER.newsletter.invalid)
     setEmail('')
     toast(FOOTER.newsletter.thanks)
   }
@@ -33,7 +33,7 @@ export default function Footer() {
             <br />
             {FOOTER.copyright[1]}
           </p>
-          <ul className="footer__social">
+          <ul className="footer__social" aria-label={FOOTER.social}>
             {SOCIAL.map(({ icon: Icon, label }) => (
               <li key={label}>
                 <button type="button" aria-label={label} onClick={() => toast(DEMO_TOAST)}>
@@ -64,7 +64,7 @@ export default function Footer() {
             <label className="footer__input">
               <span className="visually-hidden">Email</span>
               <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={FOOTER.newsletter.placeholder} />
-              <button type="submit" aria-label="訂閱">
+              <button type="submit" aria-label={FOOTER.newsletter.submit}>
                 <Send size={14} />
               </button>
             </label>
