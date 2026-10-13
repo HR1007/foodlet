@@ -1,0 +1,154 @@
+/* ---------- 功能介紹 / 創新模式 hero ---------- */
+.page-hero {
+  padding: var(--space-9) 0;
+}
+
+.page-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.page-hero__art {
+  display: flex;
+  justify-content: center;
+}
+
+.page-hero__accent {
+  font-size: var(--h3);
+  line-height: var(--h3-lh);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.page-hero__copy h1 {
+  margin-top: var(--space-2);
+  font-size: var(--h3);
+  line-height: var(--h3-lh);
+  font-weight: 600;
+  color: var(--black);
+}
+
+.page-hero__body {
+  margin-top: var(--space-4);
+  font-size: var(--body-1);
+  line-height: var(--body-1-lh);
+  font-weight: 500;
+  color: var(--black);
+}
+
+/* ---------- 商業模式 hero ---------- */
+.biz-hero {
+  padding: var(--space-8) 0 var(--space-9);
+  background: var(--grey-blue);
+  overflow: hidden;
+}
+
+.biz-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+  padding: 0;
+  list-style: none;
+}
+
+.biz-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.biz-card__icon {
+  color: var(--primary);
+}
+
+.biz-card h2 {
+  font-size: var(--h3);
+  line-height: var(--h3-lh);
+  font-weight: 700;
+  color: var(--d-grey);
+}
+
+.biz-card p {
+  font-size: var(--body-3);
+  line-height: var(--body-3-lh);
+  color: var(--grey);
+}
+
+.biz-hero__statement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 860px;
+  margin: var(--space-7) auto 0;
+  text-align: center;
+}
+
+.biz-hero__statement > p {
+  font-size: var(--h4);
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.biz-hero__statement .signature {
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .page-hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .biz-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .page-hero {
+    padding: var(--space-7) 0;
+  }
+
+  .page-hero__accent,
+  .page-hero__copy h1 {
+    font-size: var(--h4);
+    line-height: var(--h4-lh);
+  }
+
+  .page-hero__body {
+    font-size: var(--body-2);
+    line-height: var(--body-2-lh);
+  }
+
+  .biz-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .biz-hero__statement > p {
+    font-size: var(--body-1);
+    line-height: var(--body-1-lh);
+  }
+}
+
+/* yellow on grey-blue fails contrast — use ink for the signature on this hero */
+.biz-hero .signature {
+  border-bottom-color: var(--black);
+}
+
+.biz-hero .signature__name {
+  color: var(--black);
+}
+
+.biz-hero .signature__role {
+  color: var(--d-grey);
+}
