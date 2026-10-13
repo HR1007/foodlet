@@ -24,6 +24,7 @@ export const FIRST_NFT = {
   claiming: '領取中',
   claimed: '已領取',
   toast: '已將「巧克力餅乾 NFT」存入你的食錢包',
+  wallet: '查看我的食錢包',
   home: '返回首頁',
   reset: '重新體驗',
   nftAlt: '金色像素框裡的巧克力餅乾 NFT',

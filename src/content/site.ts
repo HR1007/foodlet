@@ -7,6 +7,8 @@ export const NAV = [
   { to: '/business', label: '商業模式' },
 ]
 
+export const WALLET_LINK = { to: '/wallet', label: '我的食錢包' }
+
 export const HEADER_CTA = { to: '/join', label: '立即體驗 Foodlet' }
 
 export const CTA_BANNER = {

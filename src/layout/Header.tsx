@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
-import { Menu, X } from 'lucide-react'
+import { Menu, Wallet, X } from 'lucide-react'
 import { Logo } from '../components/Logo'
 import { ButtonLink } from '../components/Button'
-import { HEADER_CTA, NAV } from '../content/site'
+import { HEADER_CTA, NAV, WALLET_LINK } from '../content/site'
 import './Header.css'
 
 export default function Header() {
@@ -44,6 +44,10 @@ export default function Header() {
               )}
             </NavLink>
           ))}
+          <NavLink to={WALLET_LINK.to} className="header__wallet">
+            <Wallet size={18} aria-hidden />
+            {WALLET_LINK.label}
+          </NavLink>
           <ButtonLink to={HEADER_CTA.to} size="small" arrow className="header__cta">
             {HEADER_CTA.label}
           </ButtonLink>
@@ -70,6 +74,9 @@ export default function Header() {
                 {item.label}
               </NavLink>
             ))}
+            <NavLink to={WALLET_LINK.to} className="header__sheet-link">
+              {WALLET_LINK.label}
+            </NavLink>
             <ButtonLink to={HEADER_CTA.to} arrow>
               {HEADER_CTA.label}
             </ButtonLink>

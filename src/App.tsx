@@ -2,6 +2,7 @@ import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { MotionConfig } from 'motion/react'
 import Layout from './layout/Layout'
 import JoinPage from './pages/JoinPage'
+import WalletPage from './pages/WalletPage'
 import HomePage from './pages/HomePage'
 import { BusinessPage, FeaturesPage, InnovationPage } from './pages/ContentPages'
 import { ToastProvider } from './components/Toast'
@@ -19,6 +20,7 @@ export default function App() {
               <Route path="/innovation" element={<InnovationPage />} />
               <Route path="/business" element={<BusinessPage />} />
               <Route path="/join" element={<JoinPage />} />
+              <Route path="/wallet" element={<WalletPage />} />
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

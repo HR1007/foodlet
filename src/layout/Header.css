@@ -76,7 +76,32 @@
 }
 
 .header__cta {
+  margin-left: var(--space-1);
+}
+
+.header__wallet {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 32px;
   margin-left: var(--space-2);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-btn);
+  font-size: var(--body-3);
+  font-weight: 500;
+  color: var(--primary-press);
+  transition: background-color 0.18s ease;
+}
+
+.header__wallet.active {
+  background: var(--tint-3);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header__wallet:hover {
+    background: var(--tint-3);
+  }
 }
 
 .header__toggle {

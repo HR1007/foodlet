@@ -5,7 +5,7 @@ import { Button, ButtonLink } from '../components/Button'
 import { LogoMark } from '../components/Logo'
 import { useToast } from '../components/Toast'
 import { asset } from '../lib/asset'
-import { clearDemo, readDemo, writeDemo } from '../lib/demo'
+import { clearDemo, collect, readDemo, writeDemo } from '../lib/demo'
 import { FIRST_NFT, LOADING, SIGNUP } from '../content/join'
 import './JoinPage.css'
 
@@ -27,7 +27,7 @@ const VALIDATORS: Record<Field, (v: string) => boolean> = {
 export default function JoinPage() {
   const saved = readDemo()
   const [step, setStep] = useState<Step>(saved ? 'nft' : 'form')
-  const [claim, setClaim] = useState<Claim>(saved?.claimed ? 'claimed' : 'ready')
+  const [claim, setClaim] = useState<Claim>(saved?.collected.cookie ? 'claimed' : 'ready')
   const [name, setName] = useState(saved?.name ?? '')
   const reduce = useReducedMotion()
 
@@ -53,7 +53,7 @@ export default function JoinPage() {
               <SignupForm
                 onDone={(n) => {
                   setName(n)
-                  writeDemo({ name: n, claimed: false })
+                  writeDemo({ name: n, collected: {} })
                   setStep('loading')
                 }}
               />
@@ -73,7 +73,7 @@ export default function JoinPage() {
                   setClaim('claiming')
                   window.setTimeout(() => {
                     setClaim('claimed')
-                    writeDemo({ name, claimed: true })
+                    collect('cookie')
                   }, CLAIM_MS)
                 }}
                 onRestart={restart}
@@ -297,7 +297,10 @@ function FirstNft({ name, claim, onClaim, onRestart }: { name: string; claim: Cl
             animate={{ opacity: 1, transform: 'translateY(0px)' }}
             transition={{ duration: 0.4, ease: EASE_OUT, delay: 0.35 }}
           >
-            <ButtonLink to="/" arrow>
+            <ButtonLink to="/wallet" arrow>
+              {FIRST_NFT.wallet}
+            </ButtonLink>
+            <ButtonLink to="/" variant="secondary">
               {FIRST_NFT.home}
             </ButtonLink>
             <Button variant="tertiary" onClick={onRestart}>

@@ -10,6 +10,7 @@
   --primary-hover: #f4b04a;    /* not in Figma (Hover = Default there); slight darken so hover reads */
   --brand-orange: #fe7551;     /* logo wordmark */
   --info: #2194f3;
+  --info-tint: #e3f2fd;
 
   /* tints (section backgrounds) */
   --tint-1: #fde3b6;
